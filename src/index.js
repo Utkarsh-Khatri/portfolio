@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { pdfjs } from 'react-pdf';
+
+// Specify the workerSrc to load the worker file from pdfjs-dist
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
